@@ -17,11 +17,11 @@
     <header>
         <div class="header-area">
             <div class="social-media">
-                <a class="fa-brands fa-linkedin linkedin link" href="linkedin" target="_blank"></a>
-                <a class="fa-brands fa-github github link" href="github" target="_blank"></a>
-                <a class="fa-brands fa-twitter twitter link" href="twitter" target="_blank"></a>
-                <a class="fa-brands fa-facebook facebook link" href="facebook" target="_blank"></a>
-                <a class="credly-icon credly link" href="credly" target="_blank"></a>
+                <a class="fa-brands fa-linkedin linkedin link" href="#" onclick="redirectToHome(event, '{% url 'linked-in' %}')"></a>
+                <a class="fa-brands fa-github github link" href="#" onclick="redirectToHome(event, '{% url 'github' %}')"></a>
+                <a class="fa-brands fa-twitter twitter link" href="twitter" target="_self"></a>
+                <a class="fa-brands fa-facebook facebook link" href="facebook" target="_self"></a>
+                <a class="credly-icon credly link" href="#" onclick="redirectToHome(event, '{% url 'credly' %}')"></a>
             </div>
             <div class="contact">
                 <i class="fa-solid fa-phone phone-icon"></i>
@@ -32,4 +32,11 @@
     {% block page_not_found %}
     {% endblock page_not_found %}
 </body>
+<script>
+    function redirectToHome(event, appUrl) {
+        event.preventDefault(); // Prevent the default link behavior
+        window.open(appUrl, '_blank');// Open the app in a new window/tab
+        window.location.href = "{% url 'home' %}"; // Redirect to the home page
+    }
+</script>
 </html>
