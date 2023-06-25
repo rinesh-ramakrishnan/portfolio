@@ -1,0 +1,35 @@
+<!-- templates/index.html-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rinesh Ramakrishnan</title>
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/fontawesome.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/brands.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'fontawesomefree/css/solid.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/page_not_found.css' %}" type="text/css">
+</head>
+<body>
+    <header>
+        <div class="header-area">
+            <div class="social-media">
+                <a class="fa-brands fa-linkedin linkedin link" href="linkedin" target="_blank"></a>
+                <a class="fa-brands fa-github github link" href="github" target="_blank"></a>
+                <a class="fa-brands fa-twitter twitter link" href="twitter" target="_blank"></a>
+                <a class="fa-brands fa-facebook facebook link" href="facebook" target="_blank"></a>
+                <a class="credly-icon credly link" href="credly" target="_blank"></a>
+            </div>
+            <div class="contact">
+                <i class="fa-solid fa-phone phone-icon"></i>
+                <span class="phone-number">(+91) 940-074-7177</span>
+            </div>
+        </div>
+    </header>
+    {% block page_not_found %}
+    {% endblock page_not_found %}
+</body>
+</html>

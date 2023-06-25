@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+.header-area {
+    position: relative;
+    display: grid;
+    grid-template-areas: ". social_media . contact";
+    padding: 0.5em;
+    background-color: #192a56;
+    color: white;
+    font-size: 2em;
+    grid-template-columns: 0.5fr 2fr 5fr 2fr;
+}
+
+.social-media {
+    display: grid;
+    grid-area: social_media;
+    place-items: flex-end;
+    grid-template-areas: "linkedin github twitter facebook credly";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.75fr;
+    place-self: center;
+}
+
+.linkedin {
+    grid-area: linkedin;
+}
+
+.github {
+    grid-area: github;
+}
+
+.twitter {
+    grid-area: twitter;
+}
+
+.facebook {
+    grid-area: facebook;
+}
+
+.credly {
+    grid-area: credly;
+}
+
+
+.linkedin,
+.github,
+.twitter,
+.facebook,
+.credly {
+    display: grid;
+    place-items: center;
+    margin-left: 1ch;
+}
+
+.credly-icon {
+    display: inline-block;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.credly-icon::before {
+    position: relative;
+    content: "Credly";
+}
+
+.linkedin:hover,
+.github:hover,
+.twitter:hover,
+.facebook:hover,
+.credly:hover {
+    transform: scale(1.4);
+    color: #A3CB38;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.contact {
+    display: grid;
+    grid-area: contact;
+    place-items: flex-end;
+    padding-right: 2em;
+    font-size: 0.75em;
+    grid-template-areas: "phone_icon phone_number";
+    grid-template-columns: 2fr 3fr;
+}
+
+.phone-icon {
+    grid-area: phone_icon
+}
+
+.phone-number {
+    grid-area: phone_number;
+}
