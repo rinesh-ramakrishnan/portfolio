@@ -14,12 +14,12 @@ body {
 .header-area {
     position: relative;
     display: grid;
-    grid-template-areas: ". social_media . contact";
+    grid-template-areas: "social_media . contact";
     padding: 0.5em;
     background-color: #192a56;
     color: white;
     font-size: 2em;
-    grid-template-columns: 0.5fr 2fr 5fr 2fr;
+    grid-template-columns: 1.5fr 4fr 1.5fr;
 }
 
 .social-media {
@@ -102,4 +102,46 @@ body {
 
 .phone-number {
     grid-area: phone_number;
+}
+
+.nav-bar-container {
+    position: fixed;
+    display: grid;
+    grid-template-areas: ". logo . menu";
+    padding: 0.5em;
+    color:  #192a56;
+    font-size: 1.25em;
+    grid-template-columns: 0.5fr 3fr 5fr 6fr;
+    font-weight: bolder;
+}
+
+.nav-bar-logo {
+    grid-area: logo;
+}
+
+.nav-bar-menu {
+    grid-area: menu;
+    justify-content: flex-end;
+}
+
+.nav-bar-menu li {
+    display: inline-block;
+    list-style: none;
+    padding: 0.5em;
+}
+
+.nav-bar-menu li:hover {
+    color: rgb(240, 147, 43);
+}
+
+.btn-menu {
+    color: white;
+    padding: 0.5em 1em;
+    background-color: #192a56;
+    border-radius: 0.25em;
+}
+
+.btn-menu:hover {
+    background-color: rgb(240, 147, 43);
+    color: white;
 }
